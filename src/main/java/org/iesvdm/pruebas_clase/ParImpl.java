@@ -6,7 +6,7 @@ public class ParImpl<K, V, U> implements Par<K, V> {
     private V value;
     private U u;
 
-    public ParImpl(K key, U u, V value) {
+    public ParImpl(K key, V value) {
         this.key = key;
         this.u = u;
         this.value = value;
@@ -39,7 +39,7 @@ public class ParImpl<K, V, U> implements Par<K, V> {
     }
 
     public static void main(String[] args) {
-        Par<String, Integer> parStrInt = new ParImpl<>("Dani", 18, 3);
+        Par<String, Integer> parStrInt = new ParImpl<>("Dani", 18);
         System.out.println(parStrInt.getKey());
 
     }
